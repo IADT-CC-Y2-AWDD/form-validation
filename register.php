@@ -123,25 +123,25 @@ $newsletter = $post_params['newsletter'];
 
 echo '<pre>'; print_r($post_params); echo '</pre>';
 
-echo "<p>" . htmlspecialchars($email) . " is present? " . (is_present($email) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($email) . " is safe email? " . (is_safe_email($email) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($email) . " is valid email? " . (is_valid_email($email) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($email) . " is valid length? " . (has_length($email, ["min" => 1, "max" => 64]) ? "Yes" : "No") . "</p>";
+echo "<p>Email: " . htmlspecialchars($email) . " is present? " . (is_present($email) ? "Yes" : "No") . "</p>";
+echo "<p>Email: " . htmlspecialchars($email) . " is safe email? " . (is_safe_email($email) ? "Yes" : "No") . "</p>";
+echo "<p>Email: " . htmlspecialchars($email) . " is valid email? " . (is_valid_email($email) ? "Yes" : "No") . "</p>";
+echo "<p>Email: " . htmlspecialchars($email) . " is valid length? " . (has_length($email, ["min" => 1, "max" => 64]) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($password) . " is present? " . (is_present($password) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($password) . " is valid length? " . (has_length($password, ["min" => 8, "max" => 64]) ? "Yes" : "No") . "</p>";
+echo "<p>Password: " . htmlspecialchars($password) . " is present? " . (is_present($password) ? "Yes" : "No") . "</p>";
+echo "<p>Password: " . htmlspecialchars($password) . " is valid length? " . (has_length($password, ["min" => 8, "max" => 64]) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($first_name) . " is present? " . (is_present($first_name) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($first_name) . " is valid length? " . (has_length($first_name, ["min" => 1, "max" => 32]) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($first_name) . " has no tags? " . (has_no_html_tags($first_name) ? "Yes" : "No") . "</p>";
+echo "<p>First name: " . htmlspecialchars($first_name) . " is present? " . (is_present($first_name) ? "Yes" : "No") . "</p>";
+echo "<p>First name: " . htmlspecialchars($first_name) . " is valid length? " . (has_length($first_name, ["min" => 1, "max" => 32]) ? "Yes" : "No") . "</p>";
+echo "<p>First name: " . htmlspecialchars($first_name) . " has no tags? " . (has_no_html_tags($first_name) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($last_name) . " is present? " . (is_present($last_name) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($last_name) . " is valid length? " . (has_length($last_name, ["min" => 1, "max" => 64]) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($last_name) . " has no tags? " . (has_no_html_tags($last_name) ? "Yes" : "No") . "</p>";
+echo "<p>Last name: " . htmlspecialchars($last_name) . " is present? " . (is_present($last_name) ? "Yes" : "No") . "</p>";
+echo "<p>Last name: " . htmlspecialchars($last_name) . " is valid length? " . (has_length($last_name, ["min" => 1, "max" => 64]) ? "Yes" : "No") . "</p>";
+echo "<p>Last name: " . htmlspecialchars($last_name) . " has no tags? " . (has_no_html_tags($last_name) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($address) . " is present? " . (is_present($address) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($address) . " is valid length? " . (has_length($address, ["min" => 1, "max" => 256]) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($address) . " has no tags? " . (has_no_html_tags($address) ? "Yes" : "No") . "</p>";
+echo "<p>Address: " . htmlspecialchars($address) . " is present? " . (is_present($address) ? "Yes" : "No") . "</p>";
+echo "<p>Address: " . htmlspecialchars($address) . " is valid length? " . (has_length($address, ["min" => 1, "max" => 256]) ? "Yes" : "No") . "</p>";
+echo "<p>Address: " . htmlspecialchars($address) . " has no tags? " . (has_no_html_tags($address) ? "Yes" : "No") . "</p>";
 
 $allowed_counties = [
   "carlow", "cavan", "clare", "cork",
@@ -152,27 +152,27 @@ $allowed_counties = [
   "sligo", "tipperary", "waterford", "westmeath",
   "wexford", "wicklow"
 ];
-echo "<p>" . htmlspecialchars($county) . " is present? " . (is_present($county) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($county) . " is valid? " . (has_inclusion_in($county, $allowed_counties) ? "Yes" : "No") . "</p>";
+echo "<p>County: " . htmlspecialchars($county) . " is present? " . (is_present($county) ? "Yes" : "No") . "</p>";
+echo "<p>County: " . htmlspecialchars($county) . " is valid? " . (has_inclusion_in($county, $allowed_counties) ? "Yes" : "No") . "</p>";
 
 $eircode_regex = "/\A([ac-fhknprtv-yAC-FHKNPRTV-Y]\d{2}|D6W)\s*[0-9ac-fhknprtv-yAC-FHKNPRTV-Y]{4}\Z/";
-echo "<p>" . htmlspecialchars($eircode) . " is present? " . (is_present($eircode) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($eircode) . " is valid Eircode format? " . (match(trim($eircode), $eircode_regex) ? "Yes" : "No") . "</p>";
+echo "<p>Eircode: " . htmlspecialchars($eircode) . " is present? " . (is_present($eircode) ? "Yes" : "No") . "</p>";
+echo "<p>Eircode: " . htmlspecialchars($eircode) . " is valid Eircode format? " . (match(trim($eircode), $eircode_regex) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($age) . " is present? " . (is_present($age) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($age) . " is safe integer? " . (is_safe_integer($age) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($age) . " is valid integer? " . (is_valid_integer($age, ["min_range"=>0, "max_range"=>120]) ? "Yes" : "No") . "</p>";
+echo "<p>Age: " . htmlspecialchars($age) . " is present? " . (is_present($age) ? "Yes" : "No") . "</p>";
+echo "<p>Age: " . htmlspecialchars($age) . " is safe integer? " . (is_safe_integer($age) ? "Yes" : "No") . "</p>";
+echo "<p>Age: " . htmlspecialchars($age) . " is valid integer? " . (is_valid_integer($age, ["min_range"=>0, "max_range"=>120]) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($height) . " is present? " . (is_present($height) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($height) . " is safe float? " . (is_safe_float($height) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($height) . " is valid float? " . (is_valid_float($height) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($height) . " is valid float format? " . (match($height, "/\A[0-9]{0,1}(\.[0-9]{0,2})?\Z/") ? "Yes" : "No") . "</p>";
+echo "<p>Height: " . htmlspecialchars($height) . " is present? " . (is_present($height) ? "Yes" : "No") . "</p>";
+echo "<p>Height: " . htmlspecialchars($height) . " is safe float? " . (is_safe_float($height) ? "Yes" : "No") . "</p>";
+echo "<p>Height: " . htmlspecialchars($height) . " is valid float? " . (is_valid_float($height) ? "Yes" : "No") . "</p>";
+echo "<p>Height: " . htmlspecialchars($height) . " is valid float format? " . (match($height, "/\A[0-9]{0,1}(\.[0-9]{0,2})?\Z/") ? "Yes" : "No") . "</p>";
 
 $allowed_languages = ["ga", "en", "fr", "de", "nl", "es", "it"];
-echo "<p>" . "languages is present? " . (is_present($languages) ? "Yes" : "No") . "</p>";
-echo "<p>" . "languages is an array? " . (is_array($languages) ? "Yes" : "No") . "</p>";
-echo "<p>" . "languages is valid? " . (list_has_inclusion_in($languages, $allowed_languages) ? "Yes" : "No") . "</p>";
+echo "<p>Languages: " . "languages is present? " . (is_present($languages) ? "Yes" : "No") . "</p>";
+echo "<p>Languages: " . "languages is an array? " . (is_array($languages) ? "Yes" : "No") . "</p>";
+echo "<p>Languages: " . "languages is valid? " . (list_has_inclusion_in($languages, $allowed_languages) ? "Yes" : "No") . "</p>";
 
-echo "<p>" . htmlspecialchars($newsletter) . " is present? " . (is_present($newsletter) ? "Yes" : "No") . "</p>";
-echo "<p>" . htmlspecialchars($newsletter) . " is valid boolean? " . (is_valid_boolean($newsletter) ? "Yes" : "No") . "</p>";
+echo "<p>Newsletter: " . htmlspecialchars($newsletter) . " is present? " . (is_present($newsletter) ? "Yes" : "No") . "</p>";
+echo "<p>Newsletter: " . htmlspecialchars($newsletter) . " is valid boolean? " . (is_valid_boolean($newsletter) ? "Yes" : "No") . "</p>";
 ?>
