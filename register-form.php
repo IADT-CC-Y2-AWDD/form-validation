@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Form validation example</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="<?= APP_URL ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?= APP_URL ?>/assets/css/template.css" rel="stylesheet">
     <link href="<?= APP_URL ?>/assets/css/register-form.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <?php require './include/header.php'; ?>
-      <?php require './include/navbar.php'; ?>
+      <?php require 'include/header.php'; ?>
+      <?php require 'include/navbar.php'; ?>
       <main role="main">
         <h1>Registration Form</h1>
         <form name='registration' action="register.php" method="post">
@@ -145,8 +144,8 @@
           </div>
 
         </form>
-      </main><!-- /.container -->
-      <?php require './include/footer.php'; ?>
+      </main>
+      <?php require 'include/footer.php'; ?>
     </div>
     <script src="<?= APP_URL ?>/assets/js/jquery-3.5.1.min.js"></script>
     <script src="<?= APP_URL ?>/assets/js/bootstrap.bundle.min.js"></script>

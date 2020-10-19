@@ -1,5 +1,5 @@
 <?php
-require_once DOCUMENT_ROOT . '/lib/validation.php';
+require_once 'lib/validation.php';
 
 function validate_email($email) {
   global $errors;
