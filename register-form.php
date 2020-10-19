@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Starter Template</title>
+    <title>Form validation example</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= APP_URL ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
