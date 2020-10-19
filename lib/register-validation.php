@@ -1,4 +1,6 @@
 <?php
+require_once DOCUMENT_ROOT . '/lib/validation.php';
+
 function validate_email($email) {
   global $errors;
   if (!is_present($email)) {

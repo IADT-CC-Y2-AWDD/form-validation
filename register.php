@@ -1,7 +1,6 @@
 <?php
-
-require_once 'lib/validation.php';
-require_once 'lib/register-validation.php';
+require_once './lib/config.php';
+require_once DOCUMENT_ROOT . '/lib/register-validation.php';
 
 $allowed_params = [
   "email",
