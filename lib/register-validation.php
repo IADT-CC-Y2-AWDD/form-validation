@@ -21,7 +21,7 @@ function validate_password($password) {
   if (!is_present($password)) {
     $errors['password'] = "Password required";
   }
-  else if (!has_length($email, ["min" => 8, "max" => 64])) {
+  else if (!has_length($password, ["min" => 8, "max" => 64])) {
     $errors['password'] = "Password is too short or long";
   }
 }
