@@ -16,7 +16,6 @@ function validate_email($email) {
     $errors['email'] = "Email is too short or long";
   }
 }
-
 function validate_password($password) {
   global $errors;
   if (!is_present($password)) {
@@ -26,7 +25,6 @@ function validate_password($password) {
     $errors['password'] = "Password is too short or long";
   }
 }
-
 function validate_first_name($first_name) {
   global $errors;
   if (!is_present($first_name)) {
@@ -39,7 +37,6 @@ function validate_first_name($first_name) {
     $errors['first-name'] = "First name cannot contain any HTML tags";
   }
 }
-
 function validate_last_name($last_name) {
   global $errors;
   if (!is_present($last_name)) {
@@ -52,7 +49,6 @@ function validate_last_name($last_name) {
     $errors['last-name'] = "Last name cannot contain any HTML tags";
   }
 }
-
 function validate_address($address) {
   global $errors;
   if (!is_present($address)) {
@@ -65,7 +61,6 @@ function validate_address($address) {
     $errors['address'] = "Address cannot contain any HTML tags";
   }
 }
-
 function validate_county($county) {
   global $errors;
   $allowed_counties = [
@@ -84,7 +79,6 @@ function validate_county($county) {
     $errors['county'] = "County  not recognised";
   }
 }
-
 function validate_eircode($eircode) {
   global $errors;
   $eircode_regex = "/\A([ac-fhknprtv-yAC-FHKNPRTV-Y]\d{2}|D6W)\s*[0-9ac-fhknprtv-yAC-FHKNPRTV-Y]{4}\Z/";
@@ -95,7 +89,6 @@ function validate_eircode($eircode) {
     $errors['eircode'] = "Eircode format is not valid";
   }
 }
-
 function validate_age($age) {
   global $errors;
   if (!is_present($age)) {
@@ -108,7 +101,6 @@ function validate_age($age) {
     $errors['age'] = "Age is not valid";
   }
 }
-
 function validate_height($height) {
   global $errors;
   if (!is_present($height)) {
@@ -124,7 +116,6 @@ function validate_height($height) {
     $errors['height'] = "Height format is not valid";
   }
 }
-
 function validate_languages($languages) {
   global $errors;
   $allowed_languages = ["ga", "en", "fr", "de", "nl", "es", "it"];
@@ -138,7 +129,6 @@ function validate_languages($languages) {
     $errors['languages'] = "Languages not recognised";
   }
 }
-
 function validate_newsletter($newsletter) {
   global $errors;
   if (!is_present($newsletter)) {

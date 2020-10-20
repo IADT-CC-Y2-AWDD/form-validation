@@ -1,4 +1,14 @@
-<?php require_once 'config.php'; ?>
+<?php
+require_once 'config.php';
+
+$method = $_SERVER['REQUEST_METHOD'];
+if ($method === "GET") {
+  // retrieving the form so it can be completed and submitted
+}
+else if ($method === "POST") {
+  // the form was submitted but there are errors
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +26,7 @@
       <?php require 'include/navbar.php'; ?>
       <main role="main">
         <h1>Registration Form</h1>
-        <form name='registration' action="register.php" method="post">
+        <form name='registration' action="register-with-error-reporting.php" method="post">
 
           <div class="form-field">
             <label for="email">Email:</label>
