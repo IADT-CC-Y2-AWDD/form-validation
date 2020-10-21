@@ -24,7 +24,10 @@ validate_height($post_params['height']);
 validate_languages($post_params['languages']);
 validate_newsletter($post_params['newsletter']);
 
-echo '<pre>'; print_r($post_params); echo '</pre>';
-echo '<pre>'; print_r($errors); echo '</pre>';
-
+if (empty($errors)) {
+  header("Location: register-success.php");
+}
+else {
+  require 'register-form-with-error-reporting.php';
+}
 ?>

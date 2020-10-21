@@ -49,3 +49,8 @@ input#age,
 input#height {
   width: 4em;
 }
+
+span.error {
+  color: red;
+  vertical-align: top;
+}
