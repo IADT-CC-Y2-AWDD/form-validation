@@ -4,7 +4,7 @@ require_once 'config.php';
 function get_value($key) {
   global $post_params;
   if (isset($post_params) && is_array($post_params) && array_key_exists($key, $post_params)) {
-    echo $post_params[$key];
+    return $post_params[$key];
   }
 }
 function get_error($key) {
@@ -67,7 +67,7 @@ else if ($method === "POST") {
           <div class="form-field">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" />
-            <span class="error"><?= get_error('email') ?></span>
+            <span class="error"><?= get_error('password') ?></span>
           </div>
 
           <div class="form-field">
@@ -123,19 +123,19 @@ else if ($method === "POST") {
 
           <div class="form-field">
             <label for="eircode">Eircode Code:</label>
-            <input type="text" name="eircode" id="eircode" value="<?= get_value('last-name') ?>" />
+            <input type="text" name="eircode" id="eircode" value="<?= get_value('eircode') ?>" />
             <span class="error"><?= get_error('eircode') ?></span>
           </div>
 
           <div class="form-field">
             <label for="age">Age:</label>
-            <input type="text" name="age" id="age" value="<?= get_value('last-name') ?>" />
+            <input type="text" name="age" id="age" value="<?= get_value('age') ?>" />
             <span class="error"><?= get_error('age') ?></span>
           </div>
 
           <div class="form-field">
             <label for="height">Height (m):</label>
-            <input type="text" name="height" id="height" value="<?= get_value('last-name') ?>" />
+            <input type="text" name="height" id="height" value="<?= get_value('height') ?>" />
             <span class="error"><?= get_error('height') ?></span>
           </div>
 
@@ -171,6 +171,7 @@ else if ($method === "POST") {
                 <label for="italian">Italian</label>
               </div>
             </div>
+            <span class="error"><?= get_error('languages') ?></span>
           </div>
 
           <div class="form-field">
@@ -185,6 +186,7 @@ else if ($method === "POST") {
                 <label for="no">No</label>
               </div>
             </div>
+            <span class="error"><?= get_error('newsletter') ?></span>
           </div>
 
           <div class="form-field">
